@@ -1,6 +1,6 @@
-function Desplegable(props) {
-  const abrirCerrarServicio = (desplegableId) => {
-    document.getElementById(desplegableId).classList.toggle("active");
+function Desplegable(props: any) {
+  const abrirCerrarServicio = (desplegableId: any) => {
+    document?.getElementById(desplegableId)?.classList.toggle("active");
   };
 
   return (
