@@ -571,7 +571,12 @@ body {
   height: auto;
   padding: 20px 0;
 }
-
+.texto-6 {
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  padding-bottom: 50px;
+}
 @media only screen and (max-width: 1000px) {
   .menu-desktop {
     display: none;
@@ -676,5 +681,48 @@ body {
   .caja-icons .caja-derecha {
     width: 100%;
     padding: 0;
+  }
+  .info-blog {
+    display: block;
+  }
+  .proyectos .proyecto-img img {
+    width: 99%;
+  }
+  .clientes .caja-derecha .nosotros-img img {
+    width: 90%;
+  }
+  .servicios .titulo {
+    padding: 60px;
+  }
+
+  .paquetes .titulo {
+    text-align: center;
+  }
+  .texto-5 {
+    font-size: 1.5rem;
+    padding: 0%;
+  }
+  .texto-6 {
+    font-size: 1.5rem;
+  }
+  .servicios .contenido {
+    padding: 0%;
+  }
+  .bg-div {
+    display: none;
+  }
+  .blog img {
+    width: 100%;
+  }
+  .contacto {
+    padding: 0%;
+  }
+  .blogs {
+    padding: 0%;
+  }
+  .nosotros .caja-izquierda {
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
   }
 }

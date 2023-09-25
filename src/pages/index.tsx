@@ -336,7 +336,7 @@ export default function Home() {
       </div>
       <div className="paquetes">
         <div className="container">
-          <div className="texto-5">
+          <div className="texto-6">
             ¡Cuéntanos cómo nuestro expertise puede agregar valor a tu marca!
           </div>
           <div className="titulo">ALGUNOS DE NUESTROS PAQUETES MENSUALES</div>
@@ -656,7 +656,7 @@ export default function Home() {
         <div className="container">
           <div className="nosotros-cajas">
             <div className="caja-izquierda">
-              <img src="img/img-2.png" alt="rectangle" />
+              <img src="img/img-6.png" alt="rectangle" />
             </div>
             <div className="caja-derecha">
               <div className="titulo">NOSOTROS</div>
