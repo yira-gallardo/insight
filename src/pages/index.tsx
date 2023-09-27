@@ -370,8 +370,8 @@ export default function Home() {
                 </div>
                 <div className="linea"></div>
                 <div className="caracteristicas">
-                  <p>
-                    <span className="icono">
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -382,11 +382,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Estrategia mensual de contenido
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -397,11 +397,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Copy y diseño
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -412,11 +412,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Levantamiento y edición de videos
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -427,12 +427,12 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Community Manager para programación y respuesta de
                     interacciones
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -443,11 +443,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Gestión de publicidad pagada
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -458,9 +458,9 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Reporte cualitativo y cuantitativo mensual
-                  </p>
+                  </div>
                   <p className="small-text">
                     *Este servicio se ajusta con base en tus necesidades
                   </p>
@@ -474,8 +474,8 @@ export default function Home() {
                 <div className="linea"></div>
 
                 <div className="caracteristicas">
-                  <p>
-                    <span className="icono">
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -486,11 +486,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     8 videos tipo reel / Tik Tok
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -501,11 +501,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Generación de guión
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -516,11 +516,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Grabación de videos
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -531,9 +531,9 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Edición y post-producción
-                  </p>
+                  </div>
                 </div>
               </div>
               <div className="paquete">
@@ -542,8 +542,8 @@ export default function Home() {
                 </div>
                 <div className="linea"></div>
                 <div className="caracteristicas">
-                  <p>
-                    <span className="icono">
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -554,11 +554,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     FB / IG Ads (Red META)
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -569,11 +569,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Tik Tok Ads
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -584,11 +584,11 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Google Ads (Search, Display, Shopping y My Business)
-                  </p>
-                  <p>
-                    <span className="icono">
+                  </div>
+                  <div className="caja-icons-2">
+                    <div className="icono">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14px"
@@ -599,9 +599,9 @@ export default function Home() {
                       >
                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                       </svg>
-                    </span>
+                    </div>
                     Whatsapp for Business
-                  </p>
+                  </div>
                   <p className="small-text-1">*Puede incluir o no diseño.</p>
                 </div>
               </div>
