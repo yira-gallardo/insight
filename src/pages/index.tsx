@@ -1,6 +1,7 @@
 import Desplegable from "@/components/Desplegable";
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const SERVICIOS_MARKETING = [
   {
@@ -246,427 +247,500 @@ export default function Home() {
           </div>
         </div>
         <div className="header">
-          <div className="container">
-            <div className="texto">Not your average Advertising Agency.</div>
-            <div className="texto-2">
-              Somos expertos en crear contenido digital y narrativas que
-              REALMENTE CONECTAN con tu audiencia potencial.
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <div className="container">
+              <div className="texto">Not your average Advertising Agency.</div>
+              <div className="texto-2">
+                Somos expertos en crear contenido digital y narrativas que
+                REALMENTE CONECTAN con tu audiencia potencial.
+              </div>
+              <div className="texto-3">Based in Mexico,</div>
+              <div className="texto-4">working Globally</div>
+              <div className="boton">
+                <button onClick={goToContacto}>CONTÁCTANOS</button>
+              </div>
             </div>
-            <div className="texto-3">Based in Mexico,</div>
-            <div className="texto-4">working Globally</div>
-            <div className="boton">
-              <button onClick={goToContacto}>CONTÁCTANOS</button>
-            </div>
-          </div>
+          </motion.div>
         </div>
         <div className="servicios" id="servicios">
-          <div className="titulo">
-            <div className="container">SERVICIOS</div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="titulo">
+              <div className="container">SERVICIOS</div>
+            </div>
+          </motion.div>
           <div className="contenido">
             <div className="container">
-              <div className="servicio">
-                <div className="izquierda">
-                  <div className="nombre">Digital</div>
-                  <div className="boton-2">
-                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <div className="servicio">
+                  <div className="izquierda">
+                    <div className="nombre">Digital</div>
+                    <div className="boton-2">
+                      <button onClick={goToContacto}>CONTÁCTANOS</button>
+                    </div>
+                  </div>
+                  <div className="derecha">
+                    <p>
+                      Más de 7 años de experiencia creando contenido original
+                      para distintas marcas. Creamos estrategias digitales lo
+                      suficientemente poderosas para resonar en lo análogo que
+                      resuenan en lo offline.
+                    </p>
+                    <p>
+                      <b>Impulsamos tu negocio a través de:</b>
+                    </p>
+                    <div className="desplegables">
+                      {SERVICIOS_MARKETING.map((servicio) => (
+                        <Desplegable
+                          key={servicio.key}
+                          id={servicio.id}
+                          titulo={servicio.titulo}
+                          texto={servicio.texto}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div className="derecha">
-                  <p>
-                    Más de 7 años de experiencia creando contenido original para
-                    distintas marcas. Creamos estrategias digitales lo
-                    suficientemente poderosas para resonar en lo análogo que
-                    resuenan en lo offline.
-                  </p>
-                  <p>
-                    <b>Impulsamos tu negocio a través de:</b>
-                  </p>
-                  <div className="desplegables">
-                    {SERVICIOS_MARKETING.map((servicio) => (
-                      <Desplegable
-                        key={servicio.key}
-                        id={servicio.id}
-                        titulo={servicio.titulo}
-                        texto={servicio.texto}
-                      />
-                    ))}
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                <div className="servicio">
+                  <div className="izquierda">
+                    <div className="nombre">OFFline</div>
+                    <div className="boton-2">
+                      <button onClick={goToContacto}>CONTÁCTANOS</button>
+                    </div>
+                  </div>
+                  <div className="derecha">
+                    <p>
+                      Aunque nuestro expertise recae en lo digital, creamos
+                      marcas que trascienden cualquier medio.
+                    </p>
+                    <p>
+                      <b>Impulsamos tu negocio a través de:</b>
+                    </p>
+                    <div className="desplegables">
+                      {SERVICIOS_AUDIOVISUAL.map((servicio) => (
+                        <Desplegable
+                          key={servicio.key}
+                          id={servicio.id}
+                          titulo={servicio.titulo}
+                          texto={servicio.texto}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="servicio">
-                <div className="izquierda">
-                  <div className="nombre">OFFline</div>
-                  <div className="boton-2">
-                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
+                <div className="servicio">
+                  <div className="izquierda">
+                    <div className="nombre">Consultoría</div>
+                    <div className="boton-2">
+                      <button onClick={goToContacto}>CONTÁCTANOS</button>
+                    </div>
                   </div>
-                </div>
-                <div className="derecha">
-                  <p>
-                    Aunque nuestro expertise recae en lo digital, creamos marcas
-                    que trascienden cualquier medio.
-                  </p>
-                  <p>
-                    <b>Impulsamos tu negocio a través de:</b>
-                  </p>
-                  <div className="desplegables">
-                    {SERVICIOS_AUDIOVISUAL.map((servicio) => (
-                      <Desplegable
-                        key={servicio.key}
-                        id={servicio.id}
-                        titulo={servicio.titulo}
-                        texto={servicio.texto}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="servicio">
-                <div className="izquierda">
-                  <div className="nombre">Consultoría</div>
-                  <div className="boton-2">
-                    <button onClick={goToContacto}>CONTÁCTANOS</button>
-                  </div>
-                </div>
 
-                <div className="derecha">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed
-                    do eiusmod tempor incididunt ut labore dolore magna aliqua.
-                    Etiam suscipit auctor cursus. Sed tempus elit vel dui
-                    scelerisque dignissim. Aenean ut urna et lorem vestibulum
-                    dignissim. Suspendisse pretium purus feugiat, posuere augue
-                    in, condimentum justo. Integer imperdiet nunc condimentum
-                    consequat consequat.
-                  </p>
-                  <p>
-                    <b>Impulsamos tu negocio a través de:</b>
-                  </p>
-                  <div className="desplegables">
-                    {SERVICIOS_DISENO.map((servicio) => (
-                      <Desplegable
-                        key={servicio.key}
-                        id={servicio.id}
-                        titulo={servicio.titulo}
-                        texto={servicio.texto}
-                      />
-                    ))}
+                  <div className="derecha">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur ipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore dolore magna
+                      aliqua. Etiam suscipit auctor cursus. Sed tempus elit vel
+                      dui scelerisque dignissim. Aenean ut urna et lorem
+                      vestibulum dignissim. Suspendisse pretium purus feugiat,
+                      posuere augue in, condimentum justo. Integer imperdiet
+                      nunc condimentum consequat consequat.
+                    </p>
+                    <p>
+                      <b>Impulsamos tu negocio a través de:</b>
+                    </p>
+                    <div className="desplegables">
+                      {SERVICIOS_DISENO.map((servicio) => (
+                        <Desplegable
+                          key={servicio.key}
+                          id={servicio.id}
+                          titulo={servicio.titulo}
+                          texto={servicio.texto}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
         <div className="paquetes">
           <div className="container">
-            <div className="texto-6">
-              ¡Cuéntanos cómo nuestro expertise puede agregar valor a tu marca!
-            </div>
-            <div className="titulo">ALGUNOS DE NUESTROS PAQUETES MENSUALES</div>
-            <div className="paquetes-info">
-              <div className="paquete">
-                <div className="nombre">
-                  Redes sociales <br></br>todo incluido*
-                </div>
-                <div className="linea"></div>
-                <div className="caracteristicas">
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Estrategia mensual de contenido
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Copy y diseño
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Levantamiento y edición de videos
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Community Manager para programación y respuesta de
-                    interacciones
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Gestión de publicidad pagada
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Reporte cualitativo y cuantitativo mensual
-                  </div>
-                  <p className="small-text">
-                    *Este servicio se ajusta con base en tus necesidades
-                  </p>
-                </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              <div className="texto-6">
+                ¡Cuéntanos cómo nuestro expertise puede agregar valor a tu
+                marca!
               </div>
-              <div className="paquete">
-                <div className="nombre">
-                  Paquete <br></br>Audiovisual
+              <div className="titulo">
+                ALGUNOS DE NUESTROS PAQUETES MENSUALES
+              </div>
+              <div className="paquetes-info">
+                <div className="paquete">
+                  <div className="nombre">
+                    Redes sociales <br></br>todo incluido*
+                  </div>
+                  <div className="linea"></div>
+                  <div className="caracteristicas">
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Estrategia mensual de contenido
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Copy y diseño
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Levantamiento y edición de videos
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Community Manager para programación y respuesta de
+                      interacciones
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Gestión de publicidad pagada
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Reporte cualitativo y cuantitativo mensual
+                    </div>
+                    <p className="small-text">
+                      *Este servicio se ajusta con base en tus necesidades
+                    </p>
+                  </div>
                 </div>
+                <div className="paquete">
+                  <div className="nombre">
+                    Paquete <br></br>Audiovisual
+                  </div>
 
-                <div className="linea"></div>
+                  <div className="linea"></div>
 
-                <div className="caracteristicas">
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
+                  <div className="caracteristicas">
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      8 videos tipo reel / Tik Tok
                     </div>
-                    8 videos tipo reel / Tik Tok
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Generación de guión
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Grabación de videos
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Edición y post-producción
+                    </div>
                   </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Generación de guión
+                </div>
+                <div className="paquete">
+                  <div className="nombre">
+                    Gestión de publicidad <br></br>digital pagada
                   </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
+                  <div className="linea"></div>
+                  <div className="caracteristicas">
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      FB / IG Ads (Red META)
                     </div>
-                    Grabación de videos
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Tik Tok Ads
                     </div>
-                    Edición y post-producción
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Google Ads (Search, Display, Shopping y My Business)
+                    </div>
+                    <div className="caja-icons-2">
+                      <div className="icono">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14px"
+                          height="14px"
+                          fill="currentColor"
+                          className="bi bi-check-lg"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                      </div>
+                      Whatsapp for Business
+                    </div>
+                    <p className="small-text-1">*Puede incluir o no diseño.</p>
                   </div>
                 </div>
               </div>
-              <div className="paquete">
-                <div className="nombre">
-                  Gestión de publicidad <br></br>digital pagada
-                </div>
-                <div className="linea"></div>
-                <div className="caracteristicas">
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    FB / IG Ads (Red META)
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Tik Tok Ads
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Google Ads (Search, Display, Shopping y My Business)
-                  </div>
-                  <div className="caja-icons-2">
-                    <div className="icono">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14px"
-                        height="14px"
-                        fill="currentColor"
-                        className="bi bi-check-lg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                      </svg>
-                    </div>
-                    Whatsapp for Business
-                  </div>
-                  <p className="small-text-1">*Puede incluir o no diseño.</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
           <div className="boton">
-            <Link href="/">CUÉNTANOS TUS NECESIDADES</Link>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              <Link href="/">CUÉNTANOS TUS NECESIDADES</Link>
+            </motion.div>
           </div>
           <div className="texto-5">
-            Nuestros servicios son tailor-made, se ajustan a las necesidades
-            específicas de tu negocio. <br></br>¡Cuéntanos lo que necesitas,
-            crearemos un esquema para ti!
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              Nuestros servicios son tailor-made, se ajustan a las necesidades
+              específicas de tu negocio. <br></br>¡Cuéntanos lo que necesitas,
+              crearemos un esquema para ti!
+            </motion.div>
           </div>
         </div>
         <div className="proyectos" id="proyectos">
           <div className="container">
             <div className="cajas-proyectos">
               <div className="caja-izquierda">
-                <div className="texto">PROYECTOS CON LOS QUE COLABORAMOS</div>
-                <div className="texto-2">
-                  Nos apasiona ofrecer resultados REALES Y TANGIBLES en el corto
-                  plazo y crear una relación benéfica con nuestros clientes.
-                  <br></br>
-                  <div className="boton">
-                    <button onClick={goToContacto}>CONTÁCTANOS</button>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="texto">PROYECTOS CON LOS QUE COLABORAMOS</div>
+                  <div className="texto-2">
+                    Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
+                    corto plazo y crear una relación benéfica con nuestros
+                    clientes.
+                    <br></br>
+                    <div className="boton">
+                      <button onClick={goToContacto}>CONTÁCTANOS</button>
+                    </div>
                   </div>
-                </div>
-                <div className="flechas">
-                  <div className="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      fill="currentColor"
-                      className="bi bi-arrow-left-circle"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
-                      />
-                    </svg>
+                  <div className="flechas">
+                    <div className="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        fill="currentColor"
+                        className="bi bi-arrow-left-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+                        />
+                      </svg>
+                    </div>
+                    <div className="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        fill="currentColor"
+                        className="bi bi-arrow-right-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <div className="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      fill="currentColor"
-                      className="bi bi-arrow-right-circle"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                </motion.div>
               </div>
               <div className="caja-derecha">
-                <div className="proyecto-img">
-                  <img src="img/img-1.png" alt="cbd" />
-                </div>
-                <div className="contador">01/08</div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="proyecto-img">
+                    <img src="img/img-1.png" alt="cbd" />
+                  </div>
+                  <div className="contador">01/08</div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -679,30 +753,44 @@ export default function Home() {
           <div className="container">
             <div className="nosotros-cajas">
               <div className="caja-izquierda">
-                <img src="img/img-6.png" alt="rectangle" />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <img src="img/img-6.png" alt="rectangle" />
+                </motion.div>
               </div>
               <div className="caja-derecha">
-                <div className="titulo">NOSOTROS</div>
-                <div className="texto">
-                  <p>
-                    Apasionados por ofrecer soluciones creativas y funcionales
-                    para marcas nacionales, globales y start-ups. Nuestra
-                    metodología de trabajo nos permite funcionar como una célula
-                    de trabajo que se integra a tus necesidades y operación
-                    diaria. 
-                  </p>
-                  <p>
-                    Creamos planes de comunicación estratégicamente pensados en
-                    las necesidades de tu negocio y tomando en cuenta la
-                    audiencia a la que te diriges. 
-                  </p>
-                  <p>
-                    Más que un equipo multi-disciplinario, Insight Agency cuenta
-                    con un equipo que se extiende a través de todos los
-                    conocimientos que nos permitirán dar un servicio de calidad
-                    a tu marca o empresa.
-                  </p>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="titulo">NOSOTROS</div>
+                  <div className="texto">
+                    <p>
+                      Apasionados por ofrecer soluciones creativas y funcionales
+                      para marcas nacionales, globales y start-ups. Nuestra
+                      metodología de trabajo nos permite funcionar como una
+                      célula de trabajo que se integra a tus necesidades y
+                      operación diaria. 
+                    </p>
+                    <p>
+                      Creamos planes de comunicación estratégicamente pensados
+                      en las necesidades de tu negocio y tomando en cuenta la
+                      audiencia a la que te diriges. 
+                    </p>
+                    <p>
+                      Más que un equipo multi-disciplinario, Insight Agency
+                      cuenta con un equipo que se extiende a través de todos los
+                      conocimientos que nos permitirán dar un servicio de
+                      calidad a tu marca o empresa.
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -711,15 +799,29 @@ export default function Home() {
           <div className="container">
             <div className="caja-clientes">
               <div className="caja-izquierda">
-                <div className="texto">
-                  EMPRESAS QUE <br></br>HAN CONFIADO <br></br>EN NOSOTROS
-                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="texto">
+                    EMPRESAS QUE <br></br>HAN CONFIADO <br></br>EN NOSOTROS
+                  </div>
+                </motion.div>
               </div>
 
               <div className="caja-derecha">
-                <div className="nosotros-img">
-                  <img src="img/clientes.png" alt="clientes" />
-                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="nosotros-img">
+                    <img src="img/clientes.png" alt="clientes" />
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -728,58 +830,79 @@ export default function Home() {
           <div className="container">
             <div className="info-blog">
               <div className="blog">
-                <div className="img">
-                  <img src="img/img-3.png"></img>
-                </div>
-                <div className="info">
-                  <p>Lorem ipsum dolor sit consectetur</p>
-                  <p className="small-text-2">17 de diciembre 2022</p>
-                  <br></br>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Lectus faucibus
-                    bibendum natoque ultrices viverra at dui libero. Egestas
-                    proin nunc in ipsum ullamcorper sit nibh pellentesque.
-                  </p>
-                  <div className="boton">
-                    <Link href="/">LEER MÁS</Link>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="img">
+                    <img src="img/img-3.png"></img>
                   </div>
-                </div>
+                  <div className="info">
+                    <p>Lorem ipsum dolor sit consectetur</p>
+                    <p className="small-text-2">17 de diciembre 2022</p>
+                    <br></br>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Lectus faucibus
+                      bibendum natoque ultrices viverra at dui libero. Egestas
+                      proin nunc in ipsum ullamcorper sit nibh pellentesque.
+                    </p>
+                    <div className="boton">
+                      <Link href="/">LEER MÁS</Link>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
               <div className="blog">
-                <div className="img">
-                  <img src="img/img-4.png"></img>
-                </div>
-                <div className="info">
-                  <p>Lorem ipsum dolor sit consectetur</p>
-                  <p className="small-text-2">17 de diciembre 2022</p>
-                  <br></br>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Lectus faucibus
-                    bibendum natoque ultrices viverra at dui libero. Egestas
-                    proin nunc in ipsum ullamcorper sit nibh pellentesque.{" "}
-                  </p>
-                  <div className="boton">
-                    <Link href="/">LEER MÁS</Link>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="img">
+                    <img src="img/img-4.png"></img>
                   </div>
-                </div>
+                  <div className="info">
+                    <p>Lorem ipsum dolor sit consectetur</p>
+                    <p className="small-text-2">17 de diciembre 2022</p>
+                    <br></br>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Lectus faucibus
+                      bibendum natoque ultrices viverra at dui libero. Egestas
+                      proin nunc in ipsum ullamcorper sit nibh pellentesque.{" "}
+                    </p>
+                    <div className="boton">
+                      <Link href="/">LEER MÁS</Link>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
               <div className="blog">
-                <div className="img">
-                  <img src="img/img-5.png"></img>
-                </div>
-                <div className="info">
-                  <p>Lorem ipsum dolor sit consectetur</p>
-                  <p className="small-text-2">17 de diciembre 2022</p>
-                  <br></br>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Lectus faucibus
-                    bibendum natoque ultrices viverra at dui libero. Egestas
-                    proin nunc in ipsum ullamcorper sit nibh pellentesque.{" "}
-                  </p>
-                  <div className="boton">
-                    <Link href="/">LEER MÁS</Link>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="img">
+                    <img src="img/img-5.png"></img>
                   </div>
-                </div>
+                  <div className="info">
+                    <p>Lorem ipsum dolor sit consectetur</p>
+                    <p className="small-text-2">17 de diciembre 2022</p>
+                    <br></br>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Lectus faucibus
+                      bibendum natoque ultrices viverra at dui libero. Egestas
+                      proin nunc in ipsum ullamcorper sit nibh pellentesque.{" "}
+                    </p>
+                    <div className="boton">
+                      <Link href="/">LEER MÁS</Link>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -805,17 +928,24 @@ export default function Home() {
                 </div>
               </div>
               <div className="caja-derecha">
-                <div className="titulo">¡Colaboremos juntos!</div>
-                <div className="texto">
-                  <p>
-                    Déjanos tus datos y nos pondremos en contacto contigo lo
-                    antes posible con una propuesta de negocio para ti.
-                  </p>
-                  <p>
-                    Somos los creadores para las empresas que quieren potenciar
-                    su negocio
-                  </p>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <div className="titulo">¡Colaboremos juntos!</div>
+                  <div className="texto">
+                    <p>
+                      Déjanos tus datos y nos pondremos en contacto contigo lo
+                      antes posible con una propuesta de negocio para ti.
+                    </p>
+                    <p>
+                      Somos los creadores para las empresas que quieren
+                      potenciar su negocio
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
