@@ -677,109 +677,305 @@ export default function Home() {
         </div>
         <div className="proyectos" id="proyectos">
           <div className="container">
-            <div className="cajas-proyectos">
-              <div className="caja-izquierda">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                >
-                  <div className="texto">PROYECTOS CON LOS QUE COLABORAMOS</div>
-                  <div className="texto-2">
-                    Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
-                    corto plazo y crear una relación benéfica con nuestros
-                    clientes.
-                    <br></br>
-                    <div className="boton">
-                      <button onClick={() => goToSection("contacto")}>
-                        CONTÁCTANOS
-                      </button>
+            <Carousel
+              infinite
+              autoPlay
+              autoPlaySpeed={3000}
+              responsive={{
+                superLargeDesktop: {
+                  // the naming can be any, depends on you.
+                  breakpoint: { max: 4000, min: 3000 },
+                  items: 1,
+                },
+                desktop: {
+                  breakpoint: { max: 3000, min: 1024 },
+                  items: 1,
+                },
+                tablet: {
+                  breakpoint: { max: 1024, min: 464 },
+                  items: 1,
+                },
+                mobile: {
+                  breakpoint: { max: 464, min: 0 },
+                  items: 1,
+                },
+              }}
+            >
+              <div>
+                <div className="cajas-proyectos">
+                  <div className="caja-izquierda">
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.2 }}
+                    >
+                      <div className="texto">
+                        PROYECTOS CON LOS QUE COLABORAMOS
+                      </div>
+                      <div className="texto-2">
+                        Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
+                        corto plazo y crear una relación benéfica con nuestros
+                        clientes.
+                        <br></br>
+                        <div className="boton">
+                          <button onClick={() => goToSection("contacto")}>
+                            CONTÁCTANOS
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                  <div className="caja-derecha">
+                    <div className="proyecto-img">
+                      <img src="img/img-1.png" alt="cbd" />
                     </div>
                   </div>
-                  <div className="flechas">
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        fill="currentColor"
-                        className="bi bi-arrow-left-circle"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
-                        />
-                      </svg>
-                    </div>
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        fill="currentColor"
-                        className="bi bi-arrow-right-circle"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </motion.div>
+                </div>
               </div>
-              <div className="caja-derecha">
-                <Carousel
-                  responsive={{
-                    superLargeDesktop: {
-                      // the naming can be any, depends on you.
-                      breakpoint: { max: 4000, min: 3000 },
-                      items: 1,
-                    },
-                    desktop: {
-                      breakpoint: { max: 3000, min: 1024 },
-                      items: 1,
-                    },
-                    tablet: {
-                      breakpoint: { max: 1024, min: 464 },
-                      items: 1,
-                    },
-                    mobile: {
-                      breakpoint: { max: 464, min: 0 },
-                      items: 1,
-                    },
-                  }}
-                >
-                  <div>
+              <div>
+                <div className="cajas-proyectos">
+                  <div className="caja-izquierda">
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.2 }}
+                    >
+                      <div className="texto">ALIBIO HOME</div>
+                      <div className="texto-2">
+                        Creamos de la mano de AliBio Home, contenido que
+                        entretiene, enseña e informa sobre sus efectivos
+                        probióticos para plantas. Untrabajo en equipo donde
+                        ellas se involucran en esta creación activa de content,
+                        logrando una comunicación que conecta con verdaderos
+                        plant-lovers en México.
+                        <br></br>
+                        Scope of work incluye:
+                        <br></br>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Creación de contenido audiovisual para redes sociales.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Diseño de contenido multiplataforma.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Gestión de publicidad pagada en Meta Ads con objetivo
+                          a conversión.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Gestión de publicidad pagada en Meta Ads con objetivo
+                          a conversión.
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                  <div className="caja-derecha">
                     <div className="proyecto-img">
                       <img src="img/img-1.png" alt="cbd" />
                     </div>
-                    <div className="contador">01/08</div>
                   </div>
-                  <div>
-                    <div className="proyecto-img">
-                      <img src="img/img-1.png" alt="cbd" />
-                    </div>
-                    <div className="contador">01/08</div>
-                  </div>
-                  <div>
-                    <div className="proyecto-img">
-                      <img src="img/img-1.png" alt="cbd" />
-                    </div>
-                    <div className="contador">01/08</div>
-                  </div>
-                  <div>
-                    <div className="proyecto-img">
-                      <img src="img/img-1.png" alt="cbd" />
-                    </div>
-                    <div className="contador">01/08</div>
-                  </div>
-                </Carousel>
+                </div>
               </div>
-            </div>
+              <div>
+                <div className="cajas-proyectos">
+                  <div className="caja-izquierda">
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.2 }}
+                    >
+                      <div className="texto">COSMICOS PET BAKERY</div>
+                      <div className="texto-2">
+                        Cosmicos Pet Bakery es una tienda de treats y pasteles
+                        para perritos y gatitos de Chicago. Kim su fundadora, se
+                        apoya de nosotros para crear su contenido en sus canales
+                        sociales. Creamos contenido a la distancia utilizando el
+                        footage y recursos fotográficos que ella fotografía
+                        desde la ciudad donde opera.
+                        <br></br>
+                        Scope of work incluye:
+                        <br></br>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Retoque de imágenes.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Edición de video.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Creación de contenido.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Redacción en inglés.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Publicación de contenido.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Asesoría de marca.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Asesoría de marca.
+                        </div>
+                        <div className="caja-icons-3">
+                          <div className="icono">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14px"
+                              height="14px"
+                              fill="currentColor"
+                              className="bi bi-check-lg"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                          </div>
+                          Diseño y programacion web
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                  <div className="caja-derecha">
+                    <div className="proyecto-img">
+                      <img src="img/img-1.png" alt="cbd" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
           </div>
         </div>
         <div className="nosotros" id="nosotros">
@@ -1000,7 +1196,7 @@ export default function Home() {
               </div>
               <div className="caja-centro">
                 <div className="caja-icon">
-                  <a href="mailto:contacto@insightagency.com">
+                  <a href="mailto:hola@insightagency.com.mx">
                     <span className="icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1013,7 +1209,24 @@ export default function Home() {
                         <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
                       </svg>
                     </span>
-                    contacto@insightagency.com
+                    hola@insightagency.com.mx <br></br>
+                  </a>
+                </div>
+                <div className="caja-icon">
+                  <a href="mailto:alessi@insightagency.com.mx">
+                    <span className="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="currentColor"
+                        className="bi bi-google"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                      </svg>
+                    </span>
+                    alessi@insightagency.com.mx
                   </a>
                 </div>
                 <div className="caja-icon">

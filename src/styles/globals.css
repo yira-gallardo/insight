@@ -318,6 +318,7 @@ body {
 }
 .proyectos .texto-2 {
   color: white;
+  font-size: 0.9em;
 }
 .proyectos .boton button {
   display: inline-block;
@@ -331,16 +332,18 @@ body {
 }
 .cajas-proyectos {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .proyectos .cajas-proyectos .caja-izquierda {
   width: 30%;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .proyectos .cajas-proyectos .caja-derecha {
   width: 70%;
 }
 .proyectos .proyecto-img img {
-  width: 121%;
+  width: 70%;
 }
 .proyectos .icon {
   color: white;
@@ -602,6 +605,14 @@ body {
   transition-duration: 0.2s;
   height: auto;
   padding: 20px 0;
+}
+.texto-5 {
+  text-align: center;
+}
+.cajas-proyectos .caja-icons-3 {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 1000px) {
