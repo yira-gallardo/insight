@@ -10,6 +10,7 @@ import {
 import { Karla } from "next/font/google";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useState } from "react";
 
 const karla = Karla({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const karla = Karla({
 });
 
 export default function Home() {
+  const [servicesOpen, setServicesOpen] = useState<string[]>([]);
   // Function to scroll to the section
   const goToSection = (section: string) => {
     const element = document.getElementById(section);
@@ -136,6 +138,82 @@ export default function Home() {
           </motion.div>
           <div className="contenido">
             <div className="container">
+              <div
+                className="servicioItem"
+                onClick={() => setServicesOpen((prev) => [...prev, "digital"])}
+              >
+                <div className="servicio">
+                  <div className="izquierda">
+                    <div className="nombre">Digital</div>
+                  </div>
+                  <div className="derecha">
+                    <div
+                      className={`${
+                        !servicesOpen.includes("digital")
+                          ? "servicioHidden"
+                          : "active"
+                      }`}
+                    >
+                      <p>
+                        Más de 7 años de experiencia creando contenido original
+                        para distintas marcas. Creamos estrategias digitales lo
+                        suficientemente poderosas para resonar en lo análogo que
+                        resuenan en lo offline.
+                      </p>
+                      <p>
+                        <b>Impulsamos tu negocio a través de:</b>
+                      </p>
+                      <div className="desplegables">
+                        {SERVICIOS_MARKETING.map((servicio) => (
+                          <Desplegable
+                            key={servicio.key}
+                            id={servicio.id}
+                            titulo={servicio.titulo}
+                            texto={servicio.texto}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="servicioItem"
+                onClick={() => setServicesOpen((prev) => [...prev, "offline"])}
+              >
+                <div className="servicio">
+                  <div className="izquierda">
+                    <div className="nombre">OFFline</div>
+                  </div>
+                  <div className="derecha">
+                    <div
+                      className={`${
+                        !servicesOpen.includes("offline")
+                          ? "servicioHidden"
+                          : "active"
+                      }`}
+                    >
+                      <p>
+                        Aunque nuestro expertise recae en lo digital, creamos
+                        marcas que trascienden cualquier medio.
+                      </p>
+                      <p>
+                        <b>Impulsamos tu negocio a través de:</b>
+                      </p>
+                      <div className="desplegables">
+                        {SERVICIOS_AUDIOVISUAL.map((servicio) => (
+                          <Desplegable
+                            key={servicio.key}
+                            id={servicio.id}
+                            titulo={servicio.titulo}
+                            texto={servicio.texto}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
