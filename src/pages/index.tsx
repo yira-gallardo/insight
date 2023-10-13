@@ -271,384 +271,255 @@ export default function Home() {
                 ALGUNOS DE NUESTROS PAQUETES MENSUALES
               </div>
               <div className="paquerte-carousel">
-                <Carousel
-                  responsive={{
-                    superLargeDesktop: {
-                      // the naming can be any, depends on you.
-                      breakpoint: { max: 4000, min: 3000 },
-                      items: 5,
-                    },
-                    desktop: {
-                      breakpoint: { max: 3000, min: 1024 },
-                      items: 3,
-                    },
-                    tablet: {
-                      breakpoint: { max: 1024, min: 464 },
-                      items: 2,
-                    },
-                    mobile: {
-                      breakpoint: { max: 464, min: 0 },
-                      items: 1,
-                    },
-                  }}
-                  infinite
-                  autoPlay
-                  autoPlaySpeed={3000}
-                >
-                  <div className="paquete-item">
-                    <div className="paquete">
-                      <div className="nombre">
-                        Redes sociales <br></br>todo incluido*
+                <div className="paquete-item">
+                  <div className="paquete">
+                    <div className="nombre">
+                      Redes sociales <br></br>todo incluido*
+                    </div>
+                    <div className="linea"></div>
+                    <div className="caracteristicas">
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Estrategia mensual de contenido
                       </div>
-                      <div className="linea"></div>
-                      <div className="caracteristicas">
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Estrategia mensual de contenido
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
                         </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Copy y diseño
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Levantamiento y edición de videos
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Community Manager para programación y respuesta de
-                          interacciones
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Gestión de publicidad pagada
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Reporte cualitativo y cuantitativo mensual
-                        </div>
-                        <p className="small-text">
-                          *Este servicio se ajusta con base en tus necesidades
-                        </p>
+                        Copy y diseño
                       </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Levantamiento y edición de videos
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Community Manager para programación y respuesta de
+                        interacciones
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Gestión de publicidad pagada
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Reporte cualitativo y cuantitativo mensual
+                      </div>
+                      <p className="small-text">
+                        *Este servicio se ajusta con base en tus necesidades
+                      </p>
                     </div>
                   </div>
-                  <div className="paquete-item">
-                    <div className="paquete">
-                      <div className="nombre">
-                        Paquete <br></br>Audiovisual
-                      </div>
+                </div>
+                <div className="paquete-item">
+                  <div className="paquete">
+                    <div className="nombre">
+                      Paquete <br></br>Audiovisual
+                    </div>
 
-                      <div className="linea"></div>
+                    <div className="linea"></div>
 
-                      <div className="caracteristicas">
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          8 videos tipo reel / Tik Tok
+                    <div className="caracteristicas">
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
                         </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Generación de guión
+                        8 videos tipo reel / Tik Tok
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
                         </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Grabación de videos
+                        Generación de guión
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
                         </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Edición y post-producción
+                        Grabación de videos
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
                         </div>
+                        Edición y post-producción
                       </div>
                     </div>
                   </div>
-                  <div className="paquete-item">
-                    <div className="paquete">
-                      <div className="nombre">
-                        Gestión de publicidad <br></br>digital pagada
+                </div>
+                <div className="paquete-item">
+                  <div className="paquete">
+                    <div className="nombre">
+                      Gestión de publicidad <br></br>digital pagada
+                    </div>
+                    <div className="linea"></div>
+                    <div className="caracteristicas">
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        FB / IG Ads (Red META)
                       </div>
-                      <div className="linea"></div>
-                      <div className="caracteristicas">
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          FB / IG Ads (Red META)
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
                         </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Tik Tok Ads
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Google Ads (Search, Display, Shopping y My Business)
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Whatsapp for Business
-                        </div>
-                        <p className="small-text-1">
-                          *Puede incluir o no diseño.
-                        </p>
+                        Tik Tok Ads
                       </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Google Ads (Search, Display, Shopping y My Business)
+                      </div>
+                      <div className="caja-icons-2">
+                        <div className="icono">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14px"
+                            height="14px"
+                            fill="currentColor"
+                            className="bi bi-check-lg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                          </svg>
+                        </div>
+                        Whatsapp for Business
+                      </div>
+                      <p className="small-text-1">
+                        *Puede incluir o no diseño.
+                      </p>
                     </div>
                   </div>
-                  <div className="paquete-item">
-                    <div className="paquete">
-                      <div className="nombre">
-                        Redes sociales <br></br>todo incluido*
-                      </div>
-                      <div className="linea"></div>
-                      <div className="caracteristicas">
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Estrategia mensual de contenido
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Copy y diseño
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Levantamiento y edición de videos
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Community Manager para programación y respuesta de
-                          interacciones
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Gestión de publicidad pagada
-                        </div>
-                        <div className="caja-icons-2">
-                          <div className="icono">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              height="14px"
-                              fill="currentColor"
-                              className="bi bi-check-lg"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                            </svg>
-                          </div>
-                          Reporte cualitativo y cuantitativo mensual
-                        </div>
-                        <p className="small-text">
-                          *Este servicio se ajusta con base en tus necesidades
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Carousel>
+                </div>
               </div>
             </motion.div>
           </div>

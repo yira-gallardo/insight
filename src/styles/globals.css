@@ -223,6 +223,9 @@ body {
 .paquetes .paquete-item {
   padding: 1rem;
 }
+.paquerte-carousel {
+  display: flex;
+}
 .paquetes-info {
   display: flex;
   justify-content: center;
@@ -305,6 +308,21 @@ body {
 .paquetes .small-text-1 {
   margin-top: 150px;
   font-size: 10px;
+  text-align: center;
+}
+.paquetes .boton link {
+  display: inline-block;
+  padding: 10px 60px;
+  background-color: white;
+  margin: 40px 0;
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid black;
+  text-align: center !important;
+}
+.boton {
   text-align: center;
 }
 .proyectos {
