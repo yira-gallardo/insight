@@ -666,17 +666,13 @@ export default function Home() {
                         Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
                         corto plazo y crear una relación benéfica con nuestros
                         clientes.
-                        <br></br>
-                        <div className="boton">
-                          <button onClick={() => goToSection("contacto")}>
-                            CONTÁCTANOS
-                          </button>
-                        </div>
                       </div>
                     </motion.div>
                   </div>
                   <div className="caja-derecha">
                     <div className="proyecto-img">
+                      <img src="img/img-1.png" alt="cbd" />
+                      <img src="img/img-1.png" alt="cbd" />
                       <img src="img/img-1.png" alt="cbd" />
                     </div>
                   </div>
@@ -1008,7 +1004,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="blogs" id="blog">
+        {/* <div className="blogs" id="blog">
           <div className="container">
             <div className="info-blog">
               <div className="blog">
@@ -1088,7 +1084,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="contacto" id="contacto">
           <div className="bg-div">
             <div className="bg-div-left" />
@@ -1135,14 +1131,6 @@ export default function Home() {
         <div className="footer">
           <div className="container">
             <div className="caja-icons">
-              <div className="caja-izquierda">
-                <div className="texto">
-                  Lorem ipsum dolor sit amet consectetur <br></br>Elit lacus sem
-                  integer velit erat ipsum ut<br></br> cum bibendum Eu mattis at
-                  quam<br></br>maecenas enim Scelerisque sed aliquam imperdiet
-                  velit tempor nibh.
-                </div>
-              </div>
               <div className="caja-centro">
                 <div className="caja-icon">
                   <a href="mailto:hola@insightagency.com.mx">

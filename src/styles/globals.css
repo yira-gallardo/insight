@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Karla", sans-serif;
+  font-family: "Karla", sans-serif !important;
 }
 body {
   padding: 0;
@@ -142,7 +142,7 @@ body {
   background-color: #181818;
   font-size: 2.2rem;
   text-align: center;
-  letter-spacing: 0.2rem;
+  font-weight: 600;
 }
 .servicios .contenido {
   background-color: white;
@@ -222,9 +222,11 @@ body {
 }
 .paquetes .paquete-item {
   padding: 1rem;
+  width: 30%;
 }
 .paquerte-carousel {
   display: flex;
+  justify-content: center;
 }
 .paquetes-info {
   display: flex;
@@ -351,17 +353,22 @@ body {
 .cajas-proyectos {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 4rem 0;
 }
 .proyectos .cajas-proyectos .caja-izquierda {
-  width: 30%;
-  padding-top: 50px;
+  width: 40%;
+  padding: 2rem;
+}
+.proyectos .caja-izquierda .texto {
+  font-weight: 600;
 }
 .proyectos .cajas-proyectos .caja-derecha {
-  width: 70%;
+  width: 60%;
 }
 .proyectos .proyecto-img img {
-  width: 70%;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 .proyectos .icon {
   color: white;
@@ -586,7 +593,7 @@ body {
 .copyright {
   color: white;
   text-align: center;
-  border-top: 1px solid white;
+  border-top: 1px solid #383737;
   margin-top: 30px;
   padding-top: 20px;
 }
