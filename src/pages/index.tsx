@@ -164,7 +164,7 @@ export default function Home() {
                         <b>Impulsamos tu negocio a través de:</b>
                       </p>
                       <div className="desplegables">
-                        {SERVICIOS_MARKETING.map((servicio) => (
+                        {SERVICIOS_MARKETING.map((servicio: any) => (
                           <Desplegable
                             key={servicio.key}
                             id={servicio.id}
@@ -201,7 +201,7 @@ export default function Home() {
                         <b>Impulsamos tu negocio a través de:</b>
                       </p>
                       <div className="desplegables">
-                        {SERVICIOS_DISENO.map((servicio) => (
+                        {SERVICIOS_DISENO.map((servicio: any) => (
                           <Desplegable
                             key={servicio.key}
                             id={servicio.id}
@@ -242,7 +242,7 @@ export default function Home() {
                         <b>Impulsamos tu negocio a través de:</b>
                       </p>
                       <div className="desplegables">
-                        {SERVICIOS_AUDIOVISUAL.map((servicio) => (
+                        {SERVICIOS_AUDIOVISUAL.map((servicio: any) => (
                           <Desplegable
                             key={servicio.key}
                             id={servicio.id}
