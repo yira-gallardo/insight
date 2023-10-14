@@ -201,6 +201,47 @@ export default function Home() {
                         <b>Impulsamos tu negocio a través de:</b>
                       </p>
                       <div className="desplegables">
+                        {SERVICIOS_DISENO.map((servicio) => (
+                          <Desplegable
+                            key={servicio.key}
+                            id={servicio.id}
+                            titulo={servicio.titulo}
+                            texto={servicio.texto}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="servicioItem"
+                onClick={() =>
+                  setServicesOpen((prev) => [...prev, "consultoria"])
+                }
+              >
+                <div className="servicio">
+                  <div className="izquierda">
+                    <div className="nombre">Consultoría</div>
+                  </div>
+                  <div className="derecha">
+                    <div
+                      className={`${
+                        !servicesOpen.includes("consultoria")
+                          ? "servicioHidden"
+                          : "active"
+                      }`}
+                    >
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur ipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore dolore magna
+                        aliqua. Etiam suscipit auctor cursus. Sed tempus elit
+                        vel dui.
+                      </p>
+                      <p>
+                        <b>Impulsamos tu negocio a través de:</b>
+                      </p>
+                      <div className="desplegables">
                         {SERVICIOS_AUDIOVISUAL.map((servicio) => (
                           <Desplegable
                             key={servicio.key}
@@ -214,122 +255,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                <div className="servicio">
-                  <div className="izquierda">
-                    <div className="nombre">Digital</div>
-                    <div className="boton-2">
-                      <button onClick={() => goToSection("contacto")}>
-                        CONTÁCTANOS
-                      </button>
-                    </div>
-                  </div>
-                  <div className="derecha">
-                    <p>
-                      Más de 7 años de experiencia creando contenido original
-                      para distintas marcas. Creamos estrategias digitales lo
-                      suficientemente poderosas para resonar en lo análogo que
-                      resuenan en lo offline.
-                    </p>
-                    <p>
-                      <b>Impulsamos tu negocio a través de:</b>
-                    </p>
-                    <div className="desplegables">
-                      {SERVICIOS_MARKETING.map((servicio) => (
-                        <Desplegable
-                          key={servicio.key}
-                          id={servicio.id}
-                          titulo={servicio.titulo}
-                          texto={servicio.texto}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.3 }}
-              >
-                <div className="servicio">
-                  <div className="izquierda">
-                    <div className="nombre">OFFline</div>
-                    <div className="boton-2">
-                      <button onClick={() => goToSection("contacto")}>
-                        CONTÁCTANOS
-                      </button>
-                    </div>
-                  </div>
-                  <div className="derecha">
-                    <p>
-                      Aunque nuestro expertise recae en lo digital, creamos
-                      marcas que trascienden cualquier medio.
-                    </p>
-                    <p>
-                      <b>Impulsamos tu negocio a través de:</b>
-                    </p>
-                    <div className="desplegables">
-                      {SERVICIOS_AUDIOVISUAL.map((servicio) => (
-                        <Desplegable
-                          key={servicio.key}
-                          id={servicio.id}
-                          titulo={servicio.titulo}
-                          texto={servicio.texto}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.4 }}
-              >
-                <div className="servicio">
-                  <div className="izquierda">
-                    <div className="nombre">Consultoría</div>
-                    <div className="boton-2">
-                      <button onClick={() => goToSection("contacto")}>
-                        CONTÁCTANOS
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="derecha">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur ipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore dolore magna
-                      aliqua. Etiam suscipit auctor cursus. Sed tempus elit vel
-                      dui scelerisque dignissim. Aenean ut urna et lorem
-                      vestibulum dignissim. Suspendisse pretium purus feugiat,
-                      posuere augue in, condimentum justo. Integer imperdiet
-                      nunc condimentum consequat consequat.
-                    </p>
-                    <p>
-                      <b>Impulsamos tu negocio a través de:</b>
-                    </p>
-                    <div className="desplegables">
-                      {SERVICIOS_DISENO.map((servicio) => (
-                        <Desplegable
-                          key={servicio.key}
-                          id={servicio.id}
-                          titulo={servicio.titulo}
-                          texto={servicio.texto}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>

@@ -1,8 +1,4 @@
 function Desplegable(props: any) {
-  const abrirCerrarServicio = (desplegableId: any) => {
-    document?.getElementById(desplegableId)?.classList.toggle("active");
-  };
-
   return (
     <div className="desplegable">
       <div className="desplegable-izquierda">

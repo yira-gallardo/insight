@@ -16,7 +16,9 @@ body {
 }
 .boton-primario {
   cursor: pointer;
-  text-align: center;
+  display: flex;
+  justify-content: left;
+
   background-color: white;
   color: #232323;
   font-weight: 600;
@@ -804,5 +806,11 @@ body {
     text-align: center;
     width: 100%;
     padding: 2rem;
+  }
+  .paquetes .paquete-item {
+    width: 100%;
+  }
+  .paquerte-carousel {
+    display: block;
   }
 }
