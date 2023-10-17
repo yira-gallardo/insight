@@ -2,6 +2,7 @@ import Desplegable from "@/components/Desplegable";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 import {
   SERVICIOS_AUDIOVISUAL,
   SERVICIOS_DISENO,
@@ -10,7 +11,7 @@ import {
 import { Karla } from "next/font/google";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const karla = Karla({
   subsets: ["latin"],
@@ -18,6 +19,31 @@ const karla = Karla({
 });
 
 export default function Home() {
+  const form: any = useRef();
+  const [isMailSent, setIsMailSent] = useState(false);
+  const [sendingMail, setSendingMail] = useState(false);
+
+  const sendEmail = (e: any) => {
+    setSendingMail(true);
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_nbvoqr7",
+        "template_iva5hr6",
+        form.current,
+        "ItpuwAnIzjjXzeuRm"
+      )
+      .then(
+        (result) => {
+          alert("Te suscribiste con éxito");
+          setIsMailSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const [servicesOpen, setServicesOpen] = useState<string[]>([]);
   // Function to scroll to the section
   const goToSection = (section: string) => {
@@ -339,8 +365,8 @@ export default function Home() {
                             <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                           </svg>
                         </div>
-                        Community Manager para programación y respuesta de
-                        interacciones
+                        Community Manager <br></br>para programación y <br></br>
+                        respuesta de interacciones
                       </div>
                       <div className="caja-icons-2">
                         <div className="icono">
@@ -500,7 +526,8 @@ export default function Home() {
                             <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                           </svg>
                         </div>
-                        Google Ads (Search, Display, Shopping y My Business)
+                        Google Ads (Search, Display,<br></br> Shopping y My
+                        Business)
                       </div>
                       <div className="caja-icons-2">
                         <div className="icono">
@@ -1018,17 +1045,17 @@ export default function Home() {
           <div className="container">
             <div className="caja-contacto">
               <div className="caja-izquierda">
-                <div className="formulario">
-                  <form>
-                    <input type="text" placeholder="NOMBRE" />
-                    <input type="text" placeholder="TELÉFONO" />
-                    <input type="text" placeholder="EMAIL" />
-                    <input type="text" placeholder="MENSAJE" />
-                  </form>
-                </div>
-                <div className="boton">
-                  <Link href="/">ENVIAR MENSAJE</Link>
-                </div>
+                <form ref={form}>
+                  <div className="formulario">
+                    <input type="text" name="nombre" placeholder="NOMBRE" />
+                    <input type="text" name="telefono" placeholder="TELÉFONO" />
+                    <input type="text" name="email" placeholder="EMAIL" />
+                    <input type="text" name="mensaje" placeholder="MENSAJE" />
+                  </div>
+                  <div className="boton" onClick={sendEmail}>
+                    <Link href="/">ENVIAR MENSAJE</Link>
+                  </div>
+                </form>
               </div>
               <div className="caja-derecha">
                 <motion.div
