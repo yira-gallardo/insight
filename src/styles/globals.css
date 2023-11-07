@@ -243,7 +243,7 @@ body {
   margin: auto;
   border-radius: 5px;
   padding: 1rem;
-  min-height: 600px;
+  min-height: 550px;
 }
 .paquetes .titulo {
   font-size: 2.5rem;
@@ -304,6 +304,7 @@ body {
 .paquetes .texto-6 {
   font-size: 1.6rem;
   text-align: center;
+  padding-top: 6rem;
 }
 .paquetes .small-text {
   font-size: 10px;
@@ -401,6 +402,7 @@ body {
 }
 .nosotros-cajas .titulo {
   font-size: 3em;
+  
 }
 .nosotros-cajas .texto {
   font-size: 1em;
@@ -658,6 +660,16 @@ body {
 .servicioHidden.active {
   display: block;
 }
+.contacto .boton {
+  display: inline-block;
+  padding: 10px 60px;
+  background-color: #000;
+  margin: 40px 0;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 4px;
+}
 
 @media only screen and (max-width: 1000px) {
   .menu-desktop {
@@ -770,8 +782,9 @@ body {
   .proyectos .proyecto-img img {
     width: 99%;
   }
-  .clientes .caja-derecha .nosotros-img img {
-    width: 90%;
+
+  .clientes .caja-derecha .nosotros-img video {
+    width: 100%;
   }
   .servicios .titulo {
     padding: 60px;
