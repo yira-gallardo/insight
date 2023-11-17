@@ -122,20 +122,27 @@ export default function Home() {
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.2 }}
                     >
-                      <h3>PROYECTO 1 asdasd</h3>
+                      <h3>ALIBIO HOME</h3>
                       <p>
-                        Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
-                        corto plazo y crear una relación benéfica con nuestros
-                        clientes.
+                        Creamos de la mano de AliBio Home, contenido que
+                        entretiene, enseña e informa sobre sus efectivos
+                        probióticos para plantas. Untrabajo en equipo donde
+                        ellas se involucran en esta creación activa de content,
+                        logrando una comunicación que conecta con verdaderos
+                        plant-lovers en México.
                       </p>
                       <p>
                         <b>Scope of work incluye:</b>
                       </p>
                       <ul>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
+                        <li>
+                          Creación de contenido audiovisual para redes sociales.
+                        </li>
+                        <li>Diseño de contenido multiplataforma.</li>
+                        <li>
+                          Gestión de publicidad pagada en Meta Ads con objetivo
+                          a conversión.
+                        </li>
                       </ul>
                     </motion.div>
                   )}
@@ -146,20 +153,26 @@ export default function Home() {
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.2 }}
                     >
-                      <h3>PROYECTO 2</h3>
+                      <h3>COSMICOS PET BAKERY</h3>
                       <p>
-                        Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
-                        corto plazo y crear una relación benéfica con nuestros
-                        clientes.
+                        Cosmicos Pet Bakery es una tienda de treats y pasteles
+                        para perritos y gatitos de Chicago. Kim su fundadora, se
+                        apoya de nosotros para crear su contenido en sus canales
+                        sociales. Creamos contenido a la distancia utilizando el
+                        footage y recursos fotográficos que ella fotografía
+                        desde la ciudad donde opera.
                       </p>
                       <p>
                         <b>Scope of work incluye:</b>
                       </p>
                       <ul>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
+                        <li>Retoque de imágenes.</li>
+                        <li>Edición de video.</li>
+                        <li>Creación de contenido.</li>
+                        <li>Redacción en inglés.</li>
+                        <li>Publicación de contenido.</li>
+                        <li>Asesoría de marca.</li>
+                        <li>Diseño y programación web</li>
                       </ul>
                     </motion.div>
                   )}
@@ -170,20 +183,28 @@ export default function Home() {
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.2 }}
                     >
-                      <h3>PROYECTO 3</h3>
+                      <h3>PUNTO AUSTRAL </h3>
                       <p>
-                        Nos apasiona ofrecer resultados REALES Y TANGIBLES en el
-                        corto plazo y crear una relación benéfica con nuestros
-                        clientes.
+                        Creamos contenido que nos permite resaltar la calidad de
+                        sus productos del mar de la Patagonia para realizar un
+                        journey que deriva en su E-Commerce donde vende Filetes
+                        de Salmón y Merluza Austral, Salmón Ahumado y
+                        Mejillones.
                       </p>
                       <p>
                         <b>Scope of work incluye:</b>
                       </p>
                       <ul>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
-                        <li>ASDASD</li>
+                        <li>
+                          Creación de contenido audiovisual para redes sociales.
+                        </li>
+                        <li>
+                          Gestión de publicidad pagada en Google y Meta Ads.
+                        </li>
+                        <li>
+                          Creación activa de estrategias para mejora en
+                          conversión.
+                        </li>
                       </ul>
                     </motion.div>
                   )}
@@ -232,25 +253,25 @@ export default function Home() {
                     {proyectoActivo === 1 && (
                       <>
                         <Image
-                          src="/img/img-1.png"
+                          src="/img/img-9.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
                         />
                         <Image
-                          src="/img/img-2.png"
+                          src="/img/img-10.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
                         />
                         <Image
-                          src="/img/img-1.png"
+                          src="/img/img-11.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
                         />
                         <Image
-                          src="/img/img-2.png"
+                          src="/img/img-12.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
@@ -260,19 +281,31 @@ export default function Home() {
                     {proyectoActivo === 2 && (
                       <>
                         <Image
-                          src="/img/img-2.png"
+                          src="/img/img-14.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
                         />
                         <Image
-                          src="/img/img-2.png"
+                          src="/img/img-15.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
                         />
                         <Image
-                          src="/img/img-1.png"
+                          src="/img/img-16.png"
+                          width={100}
+                          height={100}
+                          alt="Proyecto"
+                        />
+                        <Image
+                          src="/img/img-17.png"
+                          width={100}
+                          height={100}
+                          alt="Proyecto"
+                        />{" "}
+                        <Image
+                          src="/img/img-18.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
@@ -282,19 +315,13 @@ export default function Home() {
                     {proyectoActivo === 3 && (
                       <>
                         <Image
-                          src="/img/img-1.png"
+                          src="/img/img-20.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
                         />
                         <Image
-                          src="/img/img-2.png"
-                          width={100}
-                          height={100}
-                          alt="Proyecto"
-                        />
-                        <Image
-                          src="/img/img-1.png"
+                          src="/img/img-21.png"
                           width={100}
                           height={100}
                           alt="Proyecto"
@@ -670,34 +697,28 @@ export default function Home() {
               >
                 <div
                   className="proyecto-image"
-                  style={{ backgroundImage: "url(/img/img-1.png" }}
+                  style={{ backgroundImage: "url(/img/img-8.png" }}
                   onClick={() => {
                     setEstaProyectosPopupActivo(true);
                     setProyectoActivo(1);
                   }}
-                >
-                  <h3>PROYECTO 1</h3>
-                </div>
+                ></div>
                 <div
                   className="proyecto-image"
-                  style={{ backgroundImage: "url(/img/img-1.png" }}
+                  style={{ backgroundImage: "url(/img/img-13.png" }}
                   onClick={() => {
                     setEstaProyectosPopupActivo(true);
                     setProyectoActivo(2);
                   }}
-                >
-                  <h3>PROYECTO 2</h3>
-                </div>
+                ></div>
                 <div
                   className="proyecto-image"
-                  style={{ backgroundImage: "url(/img/img-1.png" }}
+                  style={{ backgroundImage: "url(/img/img-19.png" }}
                   onClick={() => {
                     setEstaProyectosPopupActivo(true);
                     setProyectoActivo(3);
                   }}
-                >
-                  <h3>PROYECTO 3</h3>
-                </div>
+                ></div>
               </Carousel>
             </div>
           </div>
