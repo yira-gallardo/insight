@@ -1043,9 +1043,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.2 }}
                 >
-                  <div className="texto">
-                    EMPRESAS QUE <br></br>HAN CONFIADO <br></br>EN NOSOTROS
-                  </div>
+                  <div className="texto">NUESTRO ÚLTIMO CASO DE ÉXITO</div>
                 </motion.div>
               </div>
 
@@ -1057,7 +1055,7 @@ export default function Home() {
                   transition={{ duration: 1, delay: 0.2 }}
                 >
                   <div className="nosotros-img">
-                    <video width="600" autoPlay muted>
+                    <video width="600" controls>
                       <source src="img/video.mp4" type="video/mp4" />
                     </video>
                   </div>
