@@ -11,7 +11,7 @@ import {
 import { Karla } from "next/font/google";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 const karla = Karla({
@@ -26,6 +26,8 @@ export default function Home() {
   const [estaProyectosPopupActivo, setEstaProyectosPopupActivo] =
     useState(false);
   const [proyectoActivo, setProyectoActivo] = useState(1);
+  const buttonLeftRef = useRef<HTMLButtonElement>(null);
+  const buttonRightRef = useRef<HTMLButtonElement>(null);
 
   const sendEmail = (e: any) => {
     setSendingMail(true);
@@ -637,7 +639,14 @@ export default function Home() {
                     </button>
                   </div>
                   <div className="nav-buttons">
-                    <div className="nav-button nav-left">
+                    <div
+                      className="nav-button nav-left"
+                      onClick={() => {
+                        if (buttonLeftRef.current) {
+                          buttonLeftRef.current.click();
+                        }
+                      }}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1.5rem"
@@ -651,7 +660,14 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <div className="nav-button nav-right">
+                    <div
+                      className="nav-button nav-right"
+                      onClick={() => {
+                        if (buttonRightRef.current) {
+                          buttonRightRef.current.click();
+                        }
+                      }}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1.5rem"
@@ -674,7 +690,7 @@ export default function Home() {
                 infinite
                 autoPlay
                 autoPlaySpeed={3000}
-                arrows={false}
+                arrows
                 responsive={{
                   superLargeDesktop: {
                     // the naming can be any, depends on you.
@@ -694,6 +710,8 @@ export default function Home() {
                     items: 1,
                   },
                 }}
+                customLeftArrow={<button ref={buttonLeftRef}></button>}
+                customRightArrow={<button ref={buttonRightRef}></button>}
               >
                 <div
                   className="proyecto-image"
@@ -1025,9 +1043,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.2 }}
                 >
-                  <div className="texto">
-                    EMPRESAS QUE <br></br>HAN CONFIADO <br></br>EN NOSOTROS
-                  </div>
+                  <div className="texto">NUESTRO ÚLTIMO CASO DE ÉXITO</div>
                 </motion.div>
               </div>
 
@@ -1039,7 +1055,7 @@ export default function Home() {
                   transition={{ duration: 1, delay: 0.2 }}
                 >
                   <div className="nosotros-img">
-                    <video width="600" autoPlay muted>
+                    <video width="600" controls>
                       <source src="img/video.mp4" type="video/mp4" />
                     </video>
                   </div>
