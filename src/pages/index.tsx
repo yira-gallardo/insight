@@ -11,7 +11,7 @@ import {
 import { Karla } from "next/font/google";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const karla = Karla({
@@ -28,6 +28,7 @@ export default function Home() {
   const [proyectoActivo, setProyectoActivo] = useState(1);
   const buttonLeftRef = useRef<HTMLButtonElement>(null);
   const buttonRightRef = useRef<HTMLButtonElement>(null);
+  const [posts, setPosts] = useState([]);
 
   const sendEmail = (e: any) => {
     setSendingMail(true);
@@ -72,6 +73,21 @@ export default function Home() {
       setProyectoActivo(proyectoActivo - 1);
     }
   };
+
+  useEffect(() => {
+    const bajarEntradasDeWordpress = async () => {
+      const response = await fetch(
+        "https://blog.insightagency.com.mx/wp-json/wp/v2/posts?_embed"
+      );
+      if (!response.ok) {
+        return;
+      }
+      const posts = await response.json();
+      setPosts(posts);
+    };
+
+    bajarEntradasDeWordpress();
+  }, []);
 
   return (
     <>
@@ -256,26 +272,26 @@ export default function Home() {
                       <>
                         <Image
                           src="/img/img-9.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-10.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-11.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-12.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                       </>
@@ -284,32 +300,32 @@ export default function Home() {
                       <>
                         <Image
                           src="/img/img-14.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-15.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-16.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-17.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />{" "}
                         <Image
                           src="/img/img-18.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                       </>
@@ -318,14 +334,14 @@ export default function Home() {
                       <>
                         <Image
                           src="/img/img-20.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                         <Image
                           src="/img/img-21.png"
-                          width={100}
-                          height={100}
+                          width={2000}
+                          height={2000}
                           alt="Proyecto"
                         />
                       </>
@@ -1064,87 +1080,44 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="blogs" id="blog">
+        <div className="blogs" id="blog">
           <div className="container">
+            <h2>BLOG</h2>
             <div className="info-blog">
-              <div className="blog">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                >
-                  <div className="img">
-                    <img src="img/img-3.png"></img>
+              {posts.length > 0 &&
+                posts.map((post: any) => (
+                  <div className="blog">
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.2 }}
+                    >
+                      <div
+                        className="img"
+                        style={{
+                          backgroundImage: `url(${post._embedded["wp:featuredmedia"][0].source_url})`,
+                        }}
+                      />
+                      <p>
+                        <b>{post.title.rendered}</b>
+                      </p>
+                      <div className="info">
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: post.excerpt.rendered,
+                          }}
+                        />
+                        <div className="boton">
+                          <Link href={post.link}>LEER MÁS</Link>
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
-                  <div className="info">
-                    <p>Lorem ipsum dolor sit consectetur</p>
-                    <p className="small-text-2">17 de diciembre 2022</p>
-                    <br></br>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Lectus faucibus
-                      bibendum natoque ultrices viverra at dui libero. Egestas
-                      proin nunc in ipsum ullamcorper sit nibh pellentesque.
-                    </p>
-                    <div className="boton">
-                      <Link href="/">LEER MÁS</Link>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-              <div className="blog">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                >
-                  <div className="img">
-                    <img src="img/img-4.png"></img>
-                  </div>
-                  <div className="info">
-                    <p>Lorem ipsum dolor sit consectetur</p>
-                    <p className="small-text-2">17 de diciembre 2022</p>
-                    <br></br>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Lectus faucibus
-                      bibendum natoque ultrices viverra at dui libero. Egestas
-                      proin nunc in ipsum ullamcorper sit nibh pellentesque.{" "}
-                    </p>
-                    <div className="boton">
-                      <Link href="/">LEER MÁS</Link>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-              <div className="blog">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                >
-                  <div className="img">
-                    <img src="img/img-5.png"></img>
-                  </div>
-                  <div className="info">
-                    <p>Lorem ipsum dolor sit consectetur</p>
-                    <p className="small-text-2">17 de diciembre 2022</p>
-                    <br></br>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur. Lectus faucibus
-                      bibendum natoque ultrices viverra at dui libero. Egestas
-                      proin nunc in ipsum ullamcorper sit nibh pellentesque.{" "}
-                    </p>
-                    <div className="boton">
-                      <Link href="/">LEER MÁS</Link>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
+                ))}
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="contacto" id="contacto">
           <div className="bg-div">
             <div className="bg-div-left" />
