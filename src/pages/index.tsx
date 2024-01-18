@@ -49,6 +49,11 @@ export default function Home() {
         }
       );
   };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const [servicesOpen, setServicesOpen] = useState<string[]>([]);
   // Function to scroll to the section
@@ -381,12 +386,21 @@ export default function Home() {
             </div>
           </div>
           <div className="right">
-            <div className="hamburguesa">
+            <div className="hamburguesa" onClick={toggleMenu}>
               <div className="linea"></div> <div className="linea"></div>
               <div className="linea"></div>
             </div>
           </div>
         </div>
+        {isMenuOpen && (
+          <div className="menu-desplegable">
+            <button onClick={() => goToSection("servicios")}>SERVICIOS</button>
+            <button onClick={() => goToSection("proyectos")}>PROYECTOS</button>
+            <button onClick={() => goToSection("nosotros")}>NOSOTROS</button>
+            <button onClick={() => goToSection("blog")}>BLOG</button>
+            <button onClick={() => goToSection("contacto")}>CONTACTO</button>
+          </div>
+        )}
         <div className="header">
           <motion.div
             initial={{ opacity: 0 }}
