@@ -1100,7 +1100,7 @@ export default function Home() {
             <div className="info-blog">
               {posts.length > 0 &&
                 posts.map((post: any) => (
-                  <div className="blog">
+                  <div className="blog" key={post.id}>
                     <motion.div
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
